@@ -3,8 +3,9 @@ const express = require('express')
 const router = express.Router()
 
 const Workout = require('../models/workoutModel')
-router.get('/', (req, res) => {
-    res.json({msg: 'GET all workouts'})
+router.get('/', async (req, res) => {
+    workouts = await Workout.find()
+    res.json(workouts)
     console.log('/api/workouts/ hit' )
 })
 
