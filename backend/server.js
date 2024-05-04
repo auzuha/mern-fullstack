@@ -14,9 +14,9 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log('Connected to MongoDB, listening to requests starts')
     // listen for requests
-app.listen(process.env.PORT, () => {
-    console.log(`Listening on port ${process.env.PORT}!!`)
-})
+    app.listen(process.env.PORT, () => {
+        console.log(`Listening on port ${process.env.PORT}!!`)
+    })
 })
 .catch((error) => {
     console.log(error)
