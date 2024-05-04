@@ -35,8 +35,9 @@ const getWorkoutById = async (req, res) => {
 //TODO: controller to update workout by id
 const updateWorkoutById = async (req, res) => {
     try{
-        
-        res.status(501).json({msg: 'Not Implemented'})
+        console.log({...req.body})
+        const updatedWorkout = await Workout.findByIdAndUpdate(req.params.id, {...req.body})
+        res.status(200).json(updatedWorkout)
     }
 
     catch(err){
