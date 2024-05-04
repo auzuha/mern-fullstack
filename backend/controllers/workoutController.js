@@ -1,9 +1,9 @@
+// import required modules
 const { default: mongoose } = require('mongoose')
 const Workout = require('../models/workoutModel')
 
 
-//get all workouts
-
+//controller to get all workouts
 const getWorkouts = async (req, res) => {
     try {
             const allWorkouts = await Workout.find()
@@ -15,8 +15,7 @@ const getWorkouts = async (req, res) => {
     }
 }
 
-// get workout by id
-
+// controller to get workout by id
 const getWorkoutById = async (req, res) => {
     try{
         const id = req.params.id;
@@ -33,7 +32,7 @@ const getWorkoutById = async (req, res) => {
 
 
 
-// update workout by id
+//TODO: controller to update workout by id
 const updateWorkoutById = async (req, res) => {
     try{
         
@@ -46,7 +45,7 @@ const updateWorkoutById = async (req, res) => {
     }
 }
 
-// delete workout by id
+// Controller to delete workout by id
 const deleteWorkoutById = async (req, res) => {
     try{
         id = mongoose.Types.ObjectId(id);
@@ -63,7 +62,7 @@ const deleteWorkoutById = async (req, res) => {
 }
 
 
-//add new workout
+//controller to add new workout
 const createWorkout = async (req, res) => {
 
     const {title, reps, load} = req.body
@@ -79,7 +78,7 @@ const createWorkout = async (req, res) => {
 }
 
 
-
+//export controller functions to use in routes file.
 module.exports = {
     getWorkouts, getWorkoutById, updateWorkoutById, deleteWorkoutById, createWorkout
 }

@@ -1,10 +1,12 @@
+//import required modules
 const express = require('express')
-
-const router = express.Router()
 
 const {
     getWorkouts, getWorkoutById, updateWorkoutById, deleteWorkoutById, createWorkout
 } = require('../controllers/workoutController')
+
+// create router for /api/workouts
+const router = express.Router()
 
 router.get('/', getWorkouts)
 
@@ -16,4 +18,5 @@ router.patch('/:id', updateWorkoutById)
 
 router.delete('/:id', deleteWorkoutById)
 
+// export router to use in main server.js
 module.exports = router
