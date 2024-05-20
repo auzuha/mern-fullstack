@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.pages {
+  background-color: whitesmoke;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  
+  height: 100px;
+
+}
+.container .link{
+  margin: 30px 150px;
+  width: fit-content;
+  /*
+  margin-left: 150px;
+  margin-top: 25px;
+  */
+  font-weight: bolder
+}
+
+
+.home {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  
+}
+
+
+.home .create{
+  font-size: 30px;
+}
+
+.home .create input{
+  height: 20px;
+  width: 90%;
+  margin-top: 10px;
+  margin: 20px auto
+}
+
+.home .create button{
+  font-size: 20px;
+  margin: 0 auto; /*this only works for block elements and btton are inline-block elements */
+  display: block; /* Make the button a block-level element */
+  width: fit-content; /* Set the desired width for the button */
+  margin: 10px auto;
+  border-radius: 10px;
+}
+.workoutDetail {
+  
+  border: 1px solid aquamarine;
+  margin-left: 150px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 70%;
+  
+  position: relative;
+}
+
+.workoutDetail h3, p {
+  padding-left: 60px;
+  
+}
+
